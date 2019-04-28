@@ -6,8 +6,9 @@ Control LFSR for the High Altitude Balloon Random Number Generator Senior Capsto
 Outputs the results from the FPGA random number generator and </br >
 the results from the control linear feedback shift register </br >
 concurrently over the terminal or command line. 
-* Waits for a serial connection
-	* COM9 is the default, but this can be changed to any port
+* Enter the serial COM port that the FPGA is connected to
+	* This can be found in Windows device manager
+* Waits for a serial connection to be established
 * when a connection is established, the results are displayed
 	* Python LFSR is on the left
 	* FPGA based LFSR is on the right
