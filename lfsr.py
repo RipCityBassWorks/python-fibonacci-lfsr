@@ -28,9 +28,11 @@ class lfsr:
 
 
     def __init__(self, seed):
+        com = input("Enter the Serial Port in the Form 'COMX': ")
+        print("\n")
         while(True):    #infinite loop used to continue the program if the FPGA is disconnected
             try:
-                self.ser = serial.Serial("COM9", 115200, timeout=10, bytesize=serial.EIGHTBITS)     #creates a new instance of pyserial
+                self.ser = serial.Serial(com, 115200, timeout=10, bytesize=serial.EIGHTBITS)     #creates a new instance of pyserial
                 self.printWelcome()
                 self.num = seed         #the first value of the LFSR is the seed
                 self.printResult()
